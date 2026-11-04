@@ -25,9 +25,9 @@ Evalúa cada regla aplicando los siguientes criterios de negocio:
 7. **RC7 (Condiciones de Pago)**: Si las condiciones de pago no se especifican, derívalas automáticamente del maestro del proveedor (`condiciones_pago_default`).
 8. **RC8 (Transacción Retroactiva)**: Si la fecha de la factura es cronológicamente anterior a la fecha de la solicitud formal, marca `retroactiva = true` y genera una **Confirmación**.
 9. **RC9 (Fecha de Aprobación)**: Valida que la fecha de aprobación sea posterior o igual a la fecha de creación de la solicitud. Si falla, emite una **Confirmación**.
-10.**RC10 (Consistencia Matemática y Valores)**: 
-    * Verifica estrictamente que: $\text{cantidad} \times \text{valor\_unitario} = \text{valor\_total}$ (con tolerancia de $\pm 1$ unidad monetaria).
-    * **Restricción absoluta**: No aceptes bajo ningún motivo cantidades, valores unitarios o totales negativos o iguales a cero. Cualquier monto $\le 0$ constituye un **Bloqueo** inmediato por inconsistencia crítica.
+10. **RC10 (Consistencia Matemática y Valores)**: 
+* Verifica estrictamente que se cumpla la operación: cantidad * valor_unitario = valor_total (con una tolerancia de +/- 1 unidad monetaria por redondeo decimal).
+* **Restricción absoluta de no negativos o ceros**: No aceptes bajo ningún motivo cantidades, valores unitarios o totales que sean negativos o iguales a cero. Cualquier monto menor o igual a 0 (`<= 0`) constituye un **Bloqueo**      inmediato por inconsistencia crítica en la orden.
 
 ---
 
