@@ -1,0 +1,27 @@
+{
+  "name": "periferia-reto-03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pilarica2506/periferia-reto-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pilarica2506/periferia-reto-03/issues"
+  },
+  "homepage": "https://github.com/pilarica2506/periferia-reto-03#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2",
+    "zod": "^4.6.7"
+  }
+}
